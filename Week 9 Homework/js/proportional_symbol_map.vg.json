@@ -21,20 +21,20 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/data/earthquake.csv"
+          "url": "https://github.com/Antonio13524/3179/blob/82b8429dd34500e8929ab2b8e98294b7a774fab7/Week%209%20Homework/data/out.csv"
         },
         "mark": {"type": "circle", "tooltip": {"content": "data"}},
         "encoding": {
           "longitude": {"field": "longitude", "type": "quantitative"},
           "latitude": {"field": "latitude", "type": "quantitative"},
           "size": {
-            "field": "mag",
+            "field": "Bathroom",
             "type": "quantitative",
             "title": "Magnitude (Richter scale)",
-            "scale": {"domain": [4, 8]}
+            "scale": {"domain": [1, 8]}
           },
           "color": {
-            "field": "depth",
+            "field": "Price",
             "type": "quantitative",
             "title": "Depth in km",
             "scale": {"scheme": "reds"}
