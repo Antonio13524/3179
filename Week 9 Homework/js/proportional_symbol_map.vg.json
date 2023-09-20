@@ -28,7 +28,7 @@
             "name": "Year_Above",
       
             "value": 0,
-            "bind": {"input": "range", "min": 0, "max": 100000000, "step": 1000000}
+            "bind": {"input": "range", "min": 2016, "max": 2018, "step": 1}
           }
         ],
         "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 3},
@@ -45,7 +45,8 @@
             {"field": "Suburb", "type": "nominal"},
             {"field": "Price", "type": "quantitative", "format": "$,"},
             {"field": "Type", "type": "nominal"},
-            {"field": "Rooms", "type": "ordinal"}
+            {"field": "Rooms", "type": "ordinal"},
+            {"field": "Sale_Year", "type": "ordinal"}
 
           ]
         }
