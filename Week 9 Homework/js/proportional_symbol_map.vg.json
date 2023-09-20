@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
     "height": 1000,
-    "title": "UPDATE THIS",
+    "title": "UPDATE THIS!",
     "projection": {"type": "mercator"},
     "layer": [
       {
