@@ -7,14 +7,14 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/output.json",
+          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/clipped_map.json",
           "format": {"type": "topojson", "feature": "vic_localities"}
         },
         "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/output.json",
+          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/clipped_map.json",
           "format": {"type": "topojson", "feature": "ne_10m_graticules_1"}
         },
         "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
@@ -23,6 +23,14 @@
         "data": {
           "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
         },
+        "params": [
+          {
+            "name": "Year_Above",
+      
+            "value": 0,
+            "bind": {"input": "range", "min": 0, "max": 100000000, "step": 1000000}
+          }
+        ],
         "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 3},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
@@ -32,7 +40,14 @@
             "type": "quantitative",
             "title": "Price ($)",
             "scale": {"scheme": "reds"}
-          }
+          },
+          "tooltip": [
+            {"field": "Suburb", "type": "nominal"},
+            {"field": "Price", "type": "quantitative", "format": "$,"},
+            {"field": "Type", "type": "nominal"},
+            {"field": "Rooms", "type": "ordinal"}
+
+          ]
         }
       }
     ]
