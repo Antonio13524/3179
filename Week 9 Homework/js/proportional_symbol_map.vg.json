@@ -4,6 +4,14 @@
     "height": 1000,
     "title": "UPDATE THIS!",
     "projection": {"type": "mercator"},
+    "params": [
+      {
+        "name": "Year_Select",
+  
+        "value": 2016,
+        "bind": {"input": "range", "min": 2016, "max": 2018, "step": 1}
+      }
+    ],
     "layer": [
       {
         "data": {
@@ -23,18 +31,13 @@
         "data": {
           "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
         },
-        "params": [
-          {
-            "name": "Year_Above",
-      
-            "value": 0,
-            "bind": {"input": "range", "min": 2016, "max": 2018, "step": 1}
-          }
+        "transform": [
+          {"filter": "datum.Sale_Year == Year_Select"}
         ],
-        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 3},
+        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 3},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
-          "latitude": {"field": "Lattitude", "type": "quantitative"},
+          "latitude": {"field": "Lattitude", "type": "quantsitative"},
           "color": {
             "field": "Price",
             "type": "quantitative",
@@ -45,8 +48,7 @@
             {"field": "Suburb", "type": "nominal"},
             {"field": "Price", "type": "quantitative", "format": "$,"},
             {"field": "Type", "type": "nominal"},
-            {"field": "Rooms", "type": "ordinal"},
-            {"field": "Sale_Year", "type": "ordinal"}
+            {"field": "Rooms", "type": "ordinal"}
 
           ]
         }
