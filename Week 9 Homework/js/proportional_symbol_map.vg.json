@@ -23,7 +23,7 @@
         "data": {
           "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}},
+        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 3},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
           "latitude": {"field": "Lattitude", "type": "quantitative"},
