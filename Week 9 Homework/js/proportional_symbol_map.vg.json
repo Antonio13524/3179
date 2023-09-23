@@ -31,7 +31,7 @@
             "field": "Price",
             "type": "quantitative",
             "title": "Price ($)",
-            "scale": {"scheme": "reds"}
+            "scale": {"scheme": "blues"}
           },
           "tooltip": [
             {"field": "Suburb", "type": "nominal"},
