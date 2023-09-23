@@ -23,15 +23,16 @@
         "data": {
           "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
         },
-        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 3},
+        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 1},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
-          "latitude": {"field": "Lattitude", "type": "quantsitative"},
+          "latitude": {"field": "Lattitude", "type": "quantitative"},
           "color": {
+            "bin": true,
             "field": "Price",
             "type": "quantitative",
             "title": "Price ($)",
-            "scale": {"scheme": "blues"}
+            "scale": {"scheme": "blues", "bins": [0, 250000, 500000, 750000, 1000000, 1500000, 2000000, 10000000 ]}
           },
           "tooltip": [
             {"field": "Suburb", "type": "nominal"},
