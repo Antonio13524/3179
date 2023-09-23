@@ -4,6 +4,14 @@
     "height": 1000,
     "title": "Melbourne House Sales 2016-2018",
     "projection": {"type": "mercator"},
+    "params": [
+      {
+        "name": "Year",
+  
+        "value": 2016,
+        "bind": {"input": "range", "min": 2016, "max": 2018, "step": 1}
+      }
+    ],
     "layer": [
       {
         "data": {
@@ -23,6 +31,9 @@
         "data": {
           "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
         },
+        "transform": [
+          {"filter": "datum.Sale_Year == Year"}
+        ],
         "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 3},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
