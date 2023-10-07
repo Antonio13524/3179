@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 800,
+    
+    "layer": [
+        {
+            "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"},
+            "mark": {
+                "type": "boxplot",
+                "extent": 1.5},
+            "encoding": {
+                "x": {"field": "Type"},
+                "y": {
+                    "field": "Price",
+                    "type": "quantitative"
+                  }
+            }
+        }
+    ]
+}
