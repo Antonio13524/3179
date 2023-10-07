@@ -1,0 +1,50 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 800,
+    
+    "title": {
+      "text": "Melbourne House Sales 2016-2018",
+       "fontSize": 20},
+    "projection": {"type": "mercator"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/clipped_map.json",
+          "format": {"type": "topojson", "feature": "vic_localities"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/js/clipped_map.json",
+          "format": {"type": "topojson", "feature": "ne_10m_graticules_1"}
+        },
+        "mark": {"type": "geoshape", "fill": null, "stroke": "grey"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"
+        },
+        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 1},
+        "encoding": {
+          "longitude": {"field": "Longtitude", "type": "quantitative"},
+          "latitude": {"field": "Lattitude", "type": "quantitative"},
+          "color": {
+            "bin": true,
+            "field": "Price",
+            "type": "quantitative",
+            "title": "Price ($)",
+            "scale": {"scheme": "blues", "bins": [0, 250000, 500000, 750000, 1000000, 1500000, 2000000, 10000000 ]}
+          },
+          "tooltip": [
+            {"field": "Suburb", "type": "nominal"},
+            {"field": "Price", "type": "quantitative", "format": "$,"},
+            {"field": "Type", "type": "nominal"},
+            {"field": "Rooms", "type": "ordinal"}
+
+          ]
+        }
+      }
+    ]
+  }
