@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 10 Homework</title>
+    <title>Melbourne Property Prices</title>
     
     <!-- Import Vega & Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
@@ -19,24 +19,55 @@
 
 
 </head>
+
 <body>
   <div class="page">
-    <!-- Heading -->
-    <h1>Melbourne House Prices</h1>
 
+    <!-- Heading -->
+    <h1>Melbourne Property Prices</h1>
+
+
+    <p>With around 21,000 properties sold in Melbourne between 2016 and 2018, buyers, sellers, investors and agents 
+      must look to data to understand market behaviour. In particular, buyers want to ensure they get good value on 
+      property purchases, while sellers want to maximise their return.
+    </p>
+
+    <h2>What are the hottest areas?</h2>
     <!-- pure grid group-->
     <div class="pure-g">
-      <div class="pure-u-1" >
+      <div class="pure-u-1-3">
+        <p></p>
+      </div>
+      <div class = "pure-u-2-3">
         <div id="symbol_map"></div>
       </div>
     </div>
-  
+    <!-- end grid-->
+
+    <h2>How do different property types compare?</h2>
     <!-- pure grid group-->
     <div class="pure-g">
-      <div class="pure-u-1">
+      <div class="pure-u-1-3">
+        <p>test whasfdasd;fklasjd;gasdhglaskdflkasdaf</p>
+      </div>
+      <div class="pure-u-2-3">
         <div id = "boxplot"></div>
       </div>
     </div>
+    <!-- end grid-->
+
+    <h2>How is the market changing?</h2>
+    <!-- pure grid group-->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <p class="italic">Local council areas can be higlighed by selecting an item on the legend</p>
+      </div>
+      <div class="pure-u-2-3">
+        <div id = "slope_graph"></div>
+      </div>
+    </div>
+    <!-- end grid-->
+
   </div>
   
  
@@ -45,7 +76,7 @@
 
   <script type="text/javascript">
 
-  var spec2 = "js/proportional_symbol_map.vg.json";
+  var spec2 = "js/proportional_symbol_map_slider.vg.json";
   vegaEmbed('#symbol_map', spec2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -54,6 +85,12 @@
   vegaEmbed('#boxplot', spec2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+  var spec2 = "js/slope_graph.vg.json";
+  vegaEmbed('#slope_graph', spec2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
 </script>
     
 </body>

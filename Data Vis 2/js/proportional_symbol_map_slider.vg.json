@@ -1,8 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
-    "height": 1000,
-    "title": "Melbourne House Sales 2016-2018",
+    "height": 500,
+    "title": {
+      "text": "Melbourne House Sales",
+       "fontSize": 20},
     "projection": {"type": "mercator"},
     "params": [
       {
@@ -39,10 +41,11 @@
           "longitude": {"field": "Longtitude", "type": "quantitative"},
           "latitude": {"field": "Lattitude", "type": "quantsitative"},
           "color": {
+            "bin": true,
             "field": "Price",
             "type": "quantitative",
             "title": "Price ($)",
-            "scale": {"scheme": "reds"}
+            "scale": {"scheme": "reds", "bins": [0, 250000, 500000, 750000, 1000000, 1500000, 2000000, 10000000 ]}
           },
           "tooltip": [
             {"field": "Suburb", "type": "nominal"},

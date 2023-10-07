@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "width": 1000,
+    "height": 500,
+
+
+    "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"},
+
+    "params" :[ 
+        { 
+            "name" : "council_highlight" , 
+            "select" : { "type" : "point" , "fields" : [ "CouncilArea" ]}, 
+            "bind" : "legend" 
+        } 
+    ],
+
+
+    "layer":[
+        {
+            "mark": "line",
+            "transform": [
+                {"filter": "datum.Sale_Year == 2016 || datum.Sale_Year == 2018" }
+            ],
+            "encoding": {
+              "x": {
+                "field": "Sale_Year",
+                "title": "Year",
+                "type": "ordinal",
+                "scale": {"padding": 0.5}
+              },
+              "y": {
+                "aggregate": "median",
+                "field": "Price",
+                "type": "quantitative"
+              },
+              "color": {"field": "CouncilArea", "type": "nominal",
+                        "legend": {
+                            "values": [
+                                "Yarra City Council",	
+                                "Moonee Valley City Council",	
+                                "Port Phillip City Council",	
+                                "Darebin City Council",	
+                                "Hobsons Bay City Council",	
+                                "Stonnington City Council",	
+                                "Boroondara City Council",	
+                                "Monash City Council",	
+                                "Glen Eira City Council",
+                                "Whitehorse City Council",	
+                                "Maribyrnong City Council",	
+                                "Bayside City Council",	
+                                "Moreland City Council",	
+                                "Manningham City Council",	
+                                "Melbourne City Council",	
+                                "Banyule City Council",	
+                                "Brimbank City Council",	
+                                "Kingston City Council",	
+                                "Hume City Council",	
+                                "Moorabool Shire Council"	
+                            ]
+                        }
+                },
+              "opacity" : { 
+                            "condition" : { "param" : "council_highlight" , 
+                            "value" : 0.9 }, 
+                            "value" : 0.1 
+                }
+            }
+        }
+        
+    ]
+}
