@@ -33,7 +33,12 @@
         "legend": {
             "title": "Median Price ($)"
         }
-      }
+      },
+      "tooltip": [
+        {"field": "Bedroom", "type": "nominal"},
+        {"field": "Bathroom", "type": "nominal"},
+        {"field": "number", "type": "quantitative", "title": "Number of Properties"}
+      ]
     },
     "config": {
       "view": {
