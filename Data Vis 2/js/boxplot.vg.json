@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 500,
+    "width": "container",
+    "height": 600,
     "title": {
         "text": "Distribution of Prices by Property Type",
-         "fontSize": 20},
+         "fontSize": 16},
 
     "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"},
 
@@ -49,28 +49,34 @@
                 "extent": 1.5
                 },
             "encoding": {
-            "y": {"field": "Type"},
-            "x": {
+            "x": {"field": "Type",
+                   "axis": {
+                    "labelAngle": -45,
+                    "labelFontSize": 14
+                   }},
+            "y": {
                 "field": "Price",
-                "type": "quantitative"
+                "type": "quantitative",
+                "scale": {"type": "linear"}
                 },
-                "tooltip": [
-                    {"field": "Suburb", "type": "nominal"},
-                    {"field": "Price", "type": "quantitative", "format": "$,"},
-                    {"field": "Rooms", "type": "ordinal"}
-                  ]
+            "tooltip": [
+                {"field": "Suburb", "type": "nominal"},
+                {"field": "Price", "type": "quantitative", "format": "$,"},
+                {"field": "Rooms", "type": "ordinal"}
+                ],
+            "color": {"field": "Type"}
                 }
         },
         {
             "mark": "rule",
             "encoding": {
-                "x": {
+                "y": {
                 "aggregate": "median",
                 "field": "Price",
                 "type": "quantitative"
                 },
                 "color": {"value": "red"},
-                "size": {"value": 3}
+                "size": {"value": 1}
             }
         },
         {
@@ -79,7 +85,7 @@
                      "dx": 85},
             "encoding": {
                 "text":{ "value": "Victorian Median Price"},
-                "x": {
+                "y": {
                     "aggregate": "median",
                     "field": "Price",
                     "type": "quantitative"

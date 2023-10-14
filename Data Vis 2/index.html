@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 
+    <style>
+      body {   
+          background-color:whitesmoke;
+      }
+
+  </style>
 
 </head>
 
@@ -24,22 +30,21 @@
   <div class="page">
 
     <!-- Heading -->
-    <h1>Melbourne Property Prices</h1>
+    <h1 class="title_box">Melbourne Property Prices</h1>
 
-
-    <p>With around 21,000 properties sold in Melbourne between 2016 and 2018, buyers, sellers, investors and agents 
-      must look to data to understand market behaviour. In particular, buyers want to ensure they get good value on 
-      property purchases, while sellers want to maximise their return.
-    </p>
-
-    <h2>What are the hottest areas?</h2>
+    <h2>Melbourne's Most Expensive Areas </h2>
     <!-- pure grid group-->
     <div class="pure-g">
       <div class="pure-u-1-3">
-        <p></p>
+        <div>
+          <p>
+          Properties in the <span class="most_expensive">inner suburbs</span>, <span class="most_expensive">eastern suburbs</span>, and along the <span class="most_expensive">beach</span> are consistently the most expensive.
+        </p>
+      </div>
+          
       </div>
       <div class = "pure-u-2-3">
-        <div id="symbol_map"></div>
+        <div id="symbol_map", class="vis_box"></div>
       </div>
     </div>
     <!-- end grid-->
@@ -48,10 +53,11 @@
     <!-- pure grid group-->
     <div class="pure-g">
       <div class="pure-u-1-3">
-        <p>Placeholder text</p>
+        <div class="text_box"></div>
+          <p>Placeholder text</p>
       </div>
       <div class="pure-u-2-3">
-        <div id = "boxplot"></div>
+        <div id = "boxplot", class="vis_box"></div>
       </div>
     </div>
     <!-- end grid-->
@@ -76,7 +82,7 @@
 
   <script type="text/javascript">
 
-  var spec2 = "js/proportional_symbol_map_slider.vg.json";
+  var spec2 = "js/dot_map_slider.vg.json";
   vegaEmbed('#symbol_map', spec2, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
