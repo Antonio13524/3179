@@ -43,10 +43,10 @@
     
     {
       "height": 350,
-      "width": 280,
+      "width": 270,
       "layer": [
         {
-          "title": "Median Price vs Distance from CBD",
+          "title": "Price vs Distance from CBD",
           "mark": "point",
           "encoding": {
             "x": {"field": "Distance", 
@@ -54,11 +54,15 @@
                   "axis": {"titleFontSize": 16, "title": "Distance (km)"}},
             "y": {"field": "Price",
                   "type": "quantitative",
-                  "aggregate": "median", 
-                  "axis": {"titleFontSize": 16, "title": "Median Price ($)"}},
+                  "axis": {"titleFontSize": 16, "title": "Price ($)"}},
             "color": {"value": 50}, 
             "size": {"value": 50},
-            "tooltip": {"field": "Price", "type": "nominal"}
+            "tooltip": [
+              {"field": "Suburb", "type": "nominal"},
+              {"field": "Price", "type": "quantitative", "format": "$,"},
+              {"field": "Type", "type": "nominal"},
+              {"field": "Rooms", "type": "ordinal"}
+              ]
           }
         },
         {
@@ -68,26 +72,37 @@
           ],
           "encoding": {
             "x": {"field": "Distance", "type": "quantitative"},
-            "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
+            "y": {"field": "Price", "type": "quantitative"},
             "color": {"value": "steelblue"}, 
             "size": {"value": 50},
-            "tooltip": {"field": "Price", "type": "nominal"}
+            "tooltip": [
+              {"field": "Suburb", "type": "nominal"},
+              {"field": "Price", "type": "quantitative", "format": "$,"},
+              {"field": "Type", "type": "nominal"},
+              {"field": "Rooms", "type": "ordinal"}
+            ]
           }
         }
       ]
     },
     {
+      "title": "Price vs Building Area",
       "height": 350,
-      "width": 280,
+      "width": 270,
       "layer": [
         {
           "mark": "point",
           "encoding": {
             "x": {"field": "BuildingArea", "type": "quantitative"},
-            "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
+            "y": {"field": "Price", "type": "quantitative"},
             "color": {"value": 50}, 
             "size": {"value": 50},
-            "tooltip": {"field": "Price", "type": "nominal"}
+            "tooltip": [
+              {"field": "Suburb", "type": "nominal"},
+              {"field": "Price", "type": "quantitative", "format": "$,"},
+              {"field": "Type", "type": "nominal"},
+              {"field": "Rooms", "type": "ordinal"}
+              ]
           }
         },
         {
@@ -100,11 +115,15 @@
                   "axis": {"titleFontSize": 16, "title": "Building Area (m²)"}},
             "y": {"field": "Price", 
                   "type": "quantitative", 
-                  "aggregate": "median", 
-                  "axis": {"titleFontSize": 16, "title": "Median Price ($)"}},
+                  "axis": {"titleFontSize": 16, "title": "Price ($)"}},
             "color": {"value": "steelblue"}, 
             "size": {"value": 50},
-            "tooltip": {"field": "Price", "type": "nominal"}
+            "tooltip": [
+              {"field": "Suburb", "type": "nominal"},
+              {"field": "Price", "type": "quantitative", "format": "$,"},
+              {"field": "Type", "type": "nominal"},
+              {"field": "Rooms", "type": "ordinal"}
+              ]
           }
         }
       ]

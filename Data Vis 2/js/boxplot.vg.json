@@ -66,6 +66,7 @@
             "tooltip": [
                 {"field": "Suburb", "type": "nominal"},
                 {"field": "Price", "type": "quantitative", "format": "$,"},
+                {"field": "Type", "type": "nominal"},
                 {"field": "Rooms", "type": "ordinal"}
                 ],
             "color": {"field": "Type"}

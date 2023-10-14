@@ -1,6 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
+    "title": "Median Price for each Council Area",
     "width": "container",
     "height": 500,
 
