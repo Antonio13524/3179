@@ -35,8 +35,8 @@
         }
       },
       "tooltip": [
-        {"field": "Bedroom", "type": "nominal"},
-        {"field": "Bathroom", "type": "nominal"},
+        {"field": "Bedroom", "type": "nominal", "title": "Bedrooms"},
+        {"field": "Bathroom", "type": "nominal", "title": "Bathrooms"},
         {"field": "number", "type": "quantitative", "title": "Number of Properties"}
       ]
     },

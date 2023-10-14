@@ -69,7 +69,8 @@
                 {"field": "Type", "type": "nominal"},
                 {"field": "Rooms", "type": "ordinal"}
                 ],
-            "color": {"field": "Type"}
+            "color": {"field": "Type",
+                     "scale": {"scheme": "tableau10"}}
                 }
         },
         {
@@ -81,7 +82,10 @@
                 "type": "quantitative"
                 },
                 "color": {"value": "red"},
-                "size": {"value": 1}
+                "size": {"value": 1},
+                "tooltip": [
+                    {"field": "Price", "aggregate": "median", "title": "Victorian Median Price", "format": "$,"}
+                ]
             }
         },
         {

@@ -73,7 +73,7 @@
           "encoding": {
             "x": {"field": "Distance", "type": "quantitative"},
             "y": {"field": "Price", "type": "quantitative"},
-            "color": {"value": "steelblue"}, 
+            "color": {"value":"steelblue" }, 
             "size": {"value": 50},
             "tooltip": [
               {"field": "Suburb", "type": "nominal"},

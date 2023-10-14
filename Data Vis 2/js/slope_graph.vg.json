@@ -43,6 +43,8 @@
                     "titleFontSize": 16
                 }
               },
+              "tooltip": [{"field": "CouncilArea", "type": "nominal"},
+                          {"field": "Price", "type": "quantitative", "aggregate": "median", "format": "$,", "title": "Median Price"}],
               "color": {"field": "CouncilArea", "type": "nominal",
                         "legend": {
                             "values": [
@@ -65,7 +67,8 @@
                                 "Brimbank City Council",	
                                 "Kingston City Council",	
                                 "Hume City Council"	
-                            ]
+                            ],
+                            "labelFontSize": 14
                         }
                 },
               "opacity" : { 
