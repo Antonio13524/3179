@@ -1,14 +1,14 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Data%20Vis%202/data/out_no_na.csv"
+      "url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Data%20Vis%202/data/median_price_grouped.csv"
     },
     "width": 600,
     "height": 300,
     "transform": [
       {"filter": "datum['Rooms']"},
       {"window": [{"op": "count", "as": "index"}]},
-      {"fold": ["Rooms", "Bathroom", "Car", "Price"]},
+      {"fold": ["Bedroom", "Bathroom", "Car", "med_price"]},
       {
         "joinaggregate": [
           {"op": "min", "field": "value", "as": "min"},
@@ -41,7 +41,7 @@
         "y": {"type": "quantitative", "field": "norm_val", "axis": null},
         "tooltip": [{
           "type": "quantitative",
-          "field": "Rooms"
+          "field": "Bedroom"
         }, {
           "type": "quantitative",
           "field": "Bathroom"
@@ -50,7 +50,7 @@
           "field": "Car"
         }, {
             "type": "quantitative",
-            "field": "Price"
+            "field": "med_price"
         }]
       }
     }, {

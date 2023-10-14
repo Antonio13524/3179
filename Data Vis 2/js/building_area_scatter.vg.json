@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "width": "container",
+    "height": 500,
+
+    "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Data%20Vis%202/data/out_no_na.csv"},
+
+
+    "mark": "point",
+    "transform":[
+      {"filter": "datum.BuildingArea < 3000"}
+    ],
+    "encoding": {
+      "x": {"field": "BuildingArea", 
+            "type": "quantitative"
+          },
+      "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
+      "tooltip": {"field": "Name", "type": "nominal"}
+    }
+  }
