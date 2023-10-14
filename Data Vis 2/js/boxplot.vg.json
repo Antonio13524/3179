@@ -52,12 +52,16 @@
             "x": {"field": "Type",
                    "axis": {
                     "labelAngle": -45,
-                    "labelFontSize": 14
+                    "labelFontSize": 14,
+                    "titleFontSize": 16
                    }},
             "y": {
                 "field": "Price",
                 "type": "quantitative",
-                "scale": {"type": "linear"}
+                "scale": {"type": "linear"},
+                "axis": {
+                    "titleFontSize": 16
+                }
                 },
             "tooltip": [
                 {"field": "Suburb", "type": "nominal"},

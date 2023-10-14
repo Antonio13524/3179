@@ -1,23 +1,23 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-    "width": 600,
+    "width": "container",
     "height": 500,
 
 
     "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Week%209%20Homework/data/out.csv"},
 
-    "params" :[ 
-        { 
-            "name" : "council_highlight" , 
-            "select" : { "type" : "point" , "fields" : [ "CouncilArea" ]}, 
-            "bind" : "legend" 
-        } 
-    ],
-
 
     "layer":[
         {
+            "params" :[ 
+                { 
+                    "name" : "council_highlight" , 
+                    "select" : { "type" : "point" , "fields" : [ "CouncilArea" ]}, 
+                    "bind" : "legend" 
+                } 
+            ],
+
             "mark": "line",
             "transform": [
                 {"filter": "datum.Sale_Year == 2016 || datum.Sale_Year == 2018" }
@@ -27,12 +27,20 @@
                 "field": "Sale_Year",
                 "title": "Year",
                 "type": "ordinal",
-                "scale": {"padding": 0.5}
+                "scale": {"padding": 0.2},
+                "axis":{
+                    "titleFontSize": 16,
+                    "labelFontSize": 14,
+                    "labelAngle": -45
+                }
               },
               "y": {
                 "aggregate": "median",
                 "field": "Price",
-                "type": "quantitative"
+                "type": "quantitative",
+                "axis":{
+                    "titleFontSize": 16
+                }
               },
               "color": {"field": "CouncilArea", "type": "nominal",
                         "legend": {
@@ -55,8 +63,7 @@
                                 "Banyule City Council",	
                                 "Brimbank City Council",	
                                 "Kingston City Council",	
-                                "Hume City Council",	
-                                "Moorabool Shire Council"	
+                                "Hume City Council"	
                             ]
                         }
                 },
@@ -65,6 +72,42 @@
                             "value" : 0.9 }, 
                             "value" : 0.1 
                 }
+            }
+        },
+        {
+            "data": {
+                "values": [
+                  {"a": 2018, "b": 2200000}
+               ]
+            },
+            "mark": {"type": "text",
+                     "align": "left",
+                     "dy": 20,
+                     "dx": -500},
+            "encoding": {
+                "text":{ "value": "Stonnington has the highest increase in Median Price"},
+                "x": {"field": "a", "type": "quantitative", "title":"", "axis": null},
+                "y": {"field": "b", "type": "quantitative", "title":""},
+                "color": {"value": "black"},
+                "size": {"value": 14}
+            }
+        },
+        {
+            "data": {
+                "values": [
+                  {"a": 2017, "b": 550000}
+               ]
+            },
+            "mark": {"type": "text",
+                     "align": "left",
+                     "dy": 20,
+                     "dx": -300},
+            "encoding": {
+                "text":{ "value": "Hume City has remained constant"},
+                "x": {"field": "a", "type": "quantitative", "title":"", "axis": null},
+                "y": {"field": "b", "type": "quantitative", "title":""},
+                "color": {"value": "black"},
+                "size": {"value": 14}
             }
         }
         

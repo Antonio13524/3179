@@ -1,3 +1,7 @@
+body *{
+    font-family:'Lucida Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sArial, sans-serif;
+}
+
 .page {
     width: 1024px;
     background-color: white;
@@ -6,9 +10,10 @@
     padding-top: 10px;
 }
 
-body *{
-    font-family:'Lucida Sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sArial, sans-serif;
+.vis_box{
+    width: 100%;
 }
+
 
 h1{
     text-align: center;
@@ -28,7 +33,6 @@ h2{
 
 p{
     text-align: justify;
-    padding-top: 50%;
 }
 
 .most_expensive{
@@ -36,18 +40,8 @@ p{
     color: rgb(184, 20, 25);
 }
 
-.vis_box{
-    width: 100%;
-}
-
-
-
-.pure-u-1{
+.interaction_desc {
+    font-style: italic;
     text-align: center;
 }
-
-.italic{
-    font-style: italic;
-}
-
 
