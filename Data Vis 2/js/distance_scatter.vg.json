@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   
   "width": "container",
-  "height": 500,
 
   "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Data%20Vis%202/data/out_no_na.csv"},
 
@@ -11,48 +10,108 @@
       "input" : "select" , 
       "options" : [ 
           null , 
-          "Abbotsford", "Airport West", "Albert Park", "Alphington", "Altona", "Altona North", "Armadale", "Ascot Vale", "Ashburton", "Ashwood", "Avondale Heights", "Balaclava", "Balwyn", "Balwyn North", "Bentleigh", "Bentleigh East", "Box Hill", "Braybrook", "Brighton", "Brighton East", "Brunswick", "Brunswick West", "Bulleen", "Burwood", "Camberwell", "Canterbury", "Carlton North", "Carnegie", "Caulfield", "Caulfield North", "Caulfield South", "Chadstone", "Clifton Hill", "Coburg", "Coburg North", "Collingwood", 
-"Doncaster", "Eaglemont", "Elsternwick", "Elwood", "Essendon", "Essendon North", "Fairfield", "Fitzroy", "Fitzroy North", "Flemington", "Footscray", "Glen Iris", "Glenroy", "Gowanbrae", "Hadfield", "Hampton", "Hampton East", "Hawthorn", "Heidelberg Heights", "Heidelberg West", "Hughesdale", "Ivanhoe", "Kealba", "Keilor East", "Kensington", "Kew", "Kew East", "Maidstone", "Malvern", "Malvern East", "Maribyrnong", "Melbourne", "Middle Park", "Mont Albert", "Moonee Ponds", "Moorabbin", "Newport", "Niddrie", 
-"North Melbourne", "Northcote", "Oak Park", "Oakleigh South", "Parkville", "Pascoe Vale", "Port Melbourne", "Prahran", "Preston", "Reservoir", "Richmond", "Rosanna", "Seddon", "South Melbourne", "South Yarra", "Southbank", "Spotswood", "St Kilda", "Strathmore", "Sunshine", "Sunshine North", "Sunshine West", "Surrey Hills", "Templestowe Lower", "Thornbury", "Toorak", "Viewbank", "Watsonia", "West Melbourne", "Williamstown", "Williamstown North", "Windsor", "Yallambie", "Yarraville", "Aberfeldie", 
-"Bellfield", "Brunswick East", "Burnley", "Carlton", "East Melbourne", "Essendon West", "Fawkner", "Hawthorn East", "Heidelberg", "Ivanhoe East", "Jacana", "Kingsbury", "Kingsville", "Murrumbeena", "Ormond", "West Footscray", "Albion", "Brooklyn", "Glen Huntly", "Oakleigh", "Ripponlea", "Cremorne", "South Kingsville", "Strathmore Heights", "Travancore", "Caulfield East", "Seaholme", "Keilor Park", "Gardenvale", "Princes Hill", "Bayswater", "Briar Hill", "Broadmeadows", "Burnside Heights", "Cairnlea", 
-"Cheltenham", "Craigieburn", "Croydon", "Dandenong North", "Diamond Creek", "Doncaster East", "Donvale", "Doreen", "Eltham", "Epping", "Frankston North", "Frankston South", "Gisborne", "Greensborough", "Healesville", "Highett", "Hillside", "Huntingdale", "Keilor Downs", "Keysborough", "Kings Park", "Lalor", "Melton", "Mernda", "Mill Park", "Mitcham", "Montmorency", "Mount Waverley", "Nunawading", "Parkdale", "Point Cook", "Rowville", "Sandringham", "Seaford", "South Morang", "Springvale", "St Albans", 
-"Sunbury", "Tarneit", "Taylors Hill", "Werribee", "Wyndham Vale", "Beaumaris", "Blackburn", "Bonbeach", "Boronia", "Burwood East", "Caroline Springs", "Carrum", "Chelsea", "Clayton", "Dandenong", "Dingley Village", "Doveton", "Frankston", "Glen Waverley", "Greenvale", "Heathmont", "Hoppers Crossing", "Melton South", "Melton West", "Mentone", "Mooroolbark", "Mordialloc", "Oakleigh East", "Ringwood East", "Roxburgh Park", "Seabrook", "Templestowe", "Thomastown", "Vermont", "Watsonia North", "Westmeadows", 
-"Wheelers Hill", "Bayswater North", "Berwick", "Black Rock", "Blackburn North", "Bundoora", "Carrum Downs", "Croydon North", "Ferntree Gully", "Gladstone Park", "Hallam", "Mulgrave", "Notting Hill", "Ringwood North", "Skye", "Sydenham", "Taylors Lakes", "Vermont South", "Beaconsfield Upper", "Blackburn South", "Chelsea Heights", "Eltham North", "Meadow Heights", "Mount Evelyn", "Noble Park", "North Warrandyte", "Riddells Creek", "Sandhurst", "Wantirna South", "Chirnside Park", "Croydon Hills", "Derrimut", 
-"Edithvale", "Forest Hill", "Keilor", "Knoxfield", "Lower Plenty", "St Helena", "Truganina", "Tullamarine", "Wollert", "Deer Park", "Hampton Park", "Montrose", "Ringwood", "The Basin", "Altona Meadows", "Clarinda", "Deepdene", "Delahey", "Diggers Rest", "Hurstbridge", "Kurunjang", "McKinnon", "Scoresby", "Aspendale", "Endeavour Hills", "Narre Warren", "Pakenham", "Warrandyte", "Beaconsfield", "Langwarrin", "Springvale South", "Yarra Glen", "Albanvale", "Ardeer", "Brookfield", "Cranbourne North", 
-"Emerald", "Whittlesea", "Clayton South", "Coolaroo", "Dallas", "Wantirna", "Waterways", "Wallan", "Williams Landing", "Campbellfield", "Kilsyth", "Plumpton", "Burnside", "Cranbourne", "Kooyong", "Bacchus Marsh", "Attwood", "Croydon South", "Botanic Ridge", "Gisborne South", "Wattle Glen", "Aspendale Gardens", "Mickleham", "Officer", "Upwey", "Lysterfield", "Patterson Lakes", "Bullengarook", "Keilor Lodge", "Research"
- ], 
+          "Abbotsford", "Aberfeldie", "Airport West", "Albanvale", "Albert Park", "Albion", "Alphington", "Altona", "Altona Meadows", "Altona North", "Ardeer", "Armadale", "Ascot Vale", "Ashburton", "Ashwood", "Aspendale", "Aspendale Gardens", "Attwood", "Avondale Heights", "Bacchus Marsh", "Balaclava", "Balwyn", "Balwyn North", "Bayswater", "Bayswater North", "Beaconsfield", "Beaconsfield Upper", "Beaumaris", "Bellfield", "Bentleigh", "Bentleigh East", "Berwick", "Black Rock", "Blackburn", "Blackburn North", 
+"Blackburn South", "Bonbeach", "Boronia", "Botanic Ridge", "Box Hill", "Braybrook", "Briar Hill", "Brighton", "Brighton East", "Broadmeadows", "Brookfield", "Brooklyn", "Brunswick", "Brunswick East", "Brunswick West", "Bulleen", "Bullengarook", "Bundoora", "Burnley", "Burnside", "Burnside Heights", "Burwood", "Burwood East", "Cairnlea", "Camberwell", "Campbellfield", "Canterbury", "Carlton", "Carlton North", "Carnegie", "Caroline Springs", "Carrum", "Carrum Downs", "Caulfield", "Caulfield East", 
+"Caulfield North", "Caulfield South", "Chadstone", "Chelsea", "Chelsea Heights", "Cheltenham", "Chirnside Park", "Clarinda", "Clayton", "Clayton South", "Clifton Hill", "Coburg", "Coburg North", "Collingwood", "Coolaroo", "Craigieburn", "Cranbourne", "Cranbourne North", "Cremorne", "Croydon", "Croydon Hills", "Croydon North", "Croydon South", "Dallas", "Dandenong", "Dandenong North", "Deepdene", "Deer Park", "Delahey", "Derrimut", "Diamond Creek", "Diggers Rest", "Dingley Village", "Doncaster", "Doncaster East", 
+"Donvale", "Doreen", "Doveton", "Eaglemont", "East Melbourne", "Edithvale", "Elsternwick", "Eltham", "Eltham North", "Elwood", "Emerald", "Endeavour Hills", "Epping", "Essendon", "Essendon North", "Essendon West", "Fairfield", "Fawkner", "Ferntree Gully", "Fitzroy", "Fitzroy North", "Flemington", "Footscray", "Forest Hill", "Frankston", "Frankston North", "Frankston South", "Gardenvale", "Gisborne", "Gisborne South", "Gladstone Park", "Glen Huntly", "Glen Iris", "Glen Waverley", "Glenroy", "Gowanbrae", 
+"Greensborough", "Greenvale", "Hadfield", "Hallam", "Hampton", "Hampton East", "Hampton Park", "Hawthorn", "Hawthorn East", "Healesville", "Heathmont", "Heidelberg", "Heidelberg Heights", "Heidelberg West", "Highett", "Hillside", "Hoppers Crossing", "Hughesdale", "Huntingdale", "Hurstbridge", "Ivanhoe", "Ivanhoe East", "Jacana", "Kealba", "Keilor", "Keilor Downs", "Keilor East", "Keilor Lodge", "Keilor Park", "Kensington", "Kew", "Kew East", "Keysborough", "Kilsyth", "Kings Park", "Kingsbury", "Kingsville", 
+"Knoxfield", "Kooyong", "Kurunjang", "Lalor", "Langwarrin", "Lower Plenty", "Lysterfield", "Maidstone", "Malvern", "Malvern East", "Maribyrnong", "McKinnon", "Meadow Heights", "Melbourne", "Melton", "Melton South", "Melton West", "Mentone", "Mernda", "Mickleham", "Middle Park", "Mill Park", "Mitcham", "Mont Albert", "Montmorency", "Montrose", "Moonee Ponds", "Moorabbin", "Mooroolbark", "Mordialloc", "Mount Evelyn", "Mount Waverley", "Mulgrave", "Murrumbeena", "Narre Warren", "Newport", "Niddrie", 
+"Noble Park", "North Melbourne", "North Warrandyte", "Northcote", "Notting Hill", "Nunawading", "Oak Park", "Oakleigh", "Oakleigh East", "Oakleigh South", "Officer", "Ormond", "Pakenham", "Parkdale", "Parkville", "Pascoe Vale", "Patterson Lakes", "Plumpton", "Point Cook", "Port Melbourne", "Prahran", "Preston", "Princes Hill", "Research", "Reservoir", "Richmond", "Riddells Creek", "Ringwood", "Ringwood East", "Ringwood North", "Ripponlea", "Rosanna", "Rowville", "Roxburgh Park", "Sandhurst", "Sandringham", 
+"Scoresby", "Seabrook", "Seaford", "Seaholme", "Seddon", "Skye", "South Kingsville", "South Melbourne", "South Morang", "South Yarra", "Southbank", "Spotswood", "Springvale", "Springvale South", "St Albans", "St Helena", "St Kilda", "Strathmore", "Strathmore Heights", "Sunbury", "Sunshine", "Sunshine North", "Sunshine West", "Surrey Hills", "Sydenham", "Tarneit", "Taylors Hill", "Taylors Lakes", "Templestowe", "Templestowe Lower", "The Basin", "Thomastown", "Thornbury", "Toorak", "Travancore", "Truganina", 
+"Tullamarine", "Upwey", "Vermont", "Vermont South", "Viewbank", "Wallan", "Wantirna", "Wantirna South", "Warrandyte", "Waterways", "Watsonia", "Watsonia North", "Wattle Glen", "Werribee", "West Footscray", "West Melbourne", "Westmeadows", "Wheelers Hill", "Whittlesea", "Williams Landing", "Williamstown", "Williamstown North", "Windsor", "Wollert", "Wyndham Vale", "Yallambie", "Yarra Glen", "Yarraville"
+  ], 
+  "labels" : [ 
+  "Show All" , 
+  "Abbotsford", "Aberfeldie", "Airport West", "Albanvale", "Albert Park", "Albion", "Alphington", "Altona", "Altona Meadows", "Altona North", "Ardeer", "Armadale", "Ascot Vale", "Ashburton", "Ashwood", "Aspendale", "Aspendale Gardens", "Attwood", "Avondale Heights", "Bacchus Marsh", "Balaclava", "Balwyn", "Balwyn North", "Bayswater", "Bayswater North", "Beaconsfield", "Beaconsfield Upper", "Beaumaris", "Bellfield", "Bentleigh", "Bentleigh East", "Berwick", "Black Rock", "Blackburn", "Blackburn North", 
+"Blackburn South", "Bonbeach", "Boronia", "Botanic Ridge", "Box Hill", "Braybrook", "Briar Hill", "Brighton", "Brighton East", "Broadmeadows", "Brookfield", "Brooklyn", "Brunswick", "Brunswick East", "Brunswick West", "Bulleen", "Bullengarook", "Bundoora", "Burnley", "Burnside", "Burnside Heights", "Burwood", "Burwood East", "Cairnlea", "Camberwell", "Campbellfield", "Canterbury", "Carlton", "Carlton North", "Carnegie", "Caroline Springs", "Carrum", "Carrum Downs", "Caulfield", "Caulfield East", 
+"Caulfield North", "Caulfield South", "Chadstone", "Chelsea", "Chelsea Heights", "Cheltenham", "Chirnside Park", "Clarinda", "Clayton", "Clayton South", "Clifton Hill", "Coburg", "Coburg North", "Collingwood", "Coolaroo", "Craigieburn", "Cranbourne", "Cranbourne North", "Cremorne", "Croydon", "Croydon Hills", "Croydon North", "Croydon South", "Dallas", "Dandenong", "Dandenong North", "Deepdene", "Deer Park", "Delahey", "Derrimut", "Diamond Creek", "Diggers Rest", "Dingley Village", "Doncaster", "Doncaster East", 
+"Donvale", "Doreen", "Doveton", "Eaglemont", "East Melbourne", "Edithvale", "Elsternwick", "Eltham", "Eltham North", "Elwood", "Emerald", "Endeavour Hills", "Epping", "Essendon", "Essendon North", "Essendon West", "Fairfield", "Fawkner", "Ferntree Gully", "Fitzroy", "Fitzroy North", "Flemington", "Footscray", "Forest Hill", "Frankston", "Frankston North", "Frankston South", "Gardenvale", "Gisborne", "Gisborne South", "Gladstone Park", "Glen Huntly", "Glen Iris", "Glen Waverley", "Glenroy", "Gowanbrae", 
+"Greensborough", "Greenvale", "Hadfield", "Hallam", "Hampton", "Hampton East", "Hampton Park", "Hawthorn", "Hawthorn East", "Healesville", "Heathmont", "Heidelberg", "Heidelberg Heights", "Heidelberg West", "Highett", "Hillside", "Hoppers Crossing", "Hughesdale", "Huntingdale", "Hurstbridge", "Ivanhoe", "Ivanhoe East", "Jacana", "Kealba", "Keilor", "Keilor Downs", "Keilor East", "Keilor Lodge", "Keilor Park", "Kensington", "Kew", "Kew East", "Keysborough", "Kilsyth", "Kings Park", "Kingsbury", "Kingsville", 
+"Knoxfield", "Kooyong", "Kurunjang", "Lalor", "Langwarrin", "Lower Plenty", "Lysterfield", "Maidstone", "Malvern", "Malvern East", "Maribyrnong", "McKinnon", "Meadow Heights", "Melbourne", "Melton", "Melton South", "Melton West", "Mentone", "Mernda", "Mickleham", "Middle Park", "Mill Park", "Mitcham", "Mont Albert", "Montmorency", "Montrose", "Moonee Ponds", "Moorabbin", "Mooroolbark", "Mordialloc", "Mount Evelyn", "Mount Waverley", "Mulgrave", "Murrumbeena", "Narre Warren", "Newport", "Niddrie", 
+"Noble Park", "North Melbourne", "North Warrandyte", "Northcote", "Notting Hill", "Nunawading", "Oak Park", "Oakleigh", "Oakleigh East", "Oakleigh South", "Officer", "Ormond", "Pakenham", "Parkdale", "Parkville", "Pascoe Vale", "Patterson Lakes", "Plumpton", "Point Cook", "Port Melbourne", "Prahran", "Preston", "Princes Hill", "Research", "Reservoir", "Richmond", "Riddells Creek", "Ringwood", "Ringwood East", "Ringwood North", "Ripponlea", "Rosanna", "Rowville", "Roxburgh Park", "Sandhurst", "Sandringham", 
+"Scoresby", "Seabrook", "Seaford", "Seaholme", "Seddon", "Skye", "South Kingsville", "South Melbourne", "South Morang", "South Yarra", "Southbank", "Spotswood", "Springvale", "Springvale South", "St Albans", "St Helena", "St Kilda", "Strathmore", "Strathmore Heights", "Sunbury", "Sunshine", "Sunshine North", "Sunshine West", "Surrey Hills", "Sydenham", "Tarneit", "Taylors Hill", "Taylors Lakes", "Templestowe", "Templestowe Lower", "The Basin", "Thomastown", "Thornbury", "Toorak", "Travancore", "Truganina", 
+"Tullamarine", "Upwey", "Vermont", "Vermont South", "Viewbank", "Wallan", "Wantirna", "Wantirna South", "Warrandyte", "Waterways", "Watsonia", "Watsonia North", "Wattle Glen", "Werribee", "West Footscray", "West Melbourne", "Westmeadows", "Wheelers Hill", "Whittlesea", "Williams Landing", "Williamstown", "Williamstown North", "Windsor", "Wollert", "Wyndham Vale", "Yallambie", "Yarra Glen", "Yarraville"
+  ],
           
 
-          "name" : "Region Selection: " }
+          "name" : "Suburb Selection: " }
        }
   ],
 
 
-  "layer": [
+  "hconcat":[
+    
     {
-      "mark": "point",
-      "encoding": {
-        "x": {"field": "Distance", "type": "quantitative"},
-        "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
-        "color": {"value": 50}, 
-        "size": {"value": 50},
-        "tooltip": {"field": "Price", "type": "nominal"}
-      }
+      "height": 350,
+      "width": 280,
+      "layer": [
+        {
+          "title": "Median Price vs Distance from CBD",
+          "mark": "point",
+          "encoding": {
+            "x": {"field": "Distance", 
+                  "type": "quantitative",  
+                  "axis": {"titleFontSize": 16, "title": "Distance (km)"}},
+            "y": {"field": "Price",
+                  "type": "quantitative",
+                  "aggregate": "median", 
+                  "axis": {"titleFontSize": 16, "title": "Median Price ($)"}},
+            "color": {"value": 50}, 
+            "size": {"value": 50},
+            "tooltip": {"field": "Price", "type": "nominal"}
+          }
+        },
+        {
+          "mark": "point",
+          "transform": [
+            {"filter": "datum.Suburb == Region_selection || Region_selection == null"} 
+          ],
+          "encoding": {
+            "x": {"field": "Distance", "type": "quantitative"},
+            "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
+            "color": {"value": "steelblue"}, 
+            "size": {"value": 50},
+            "tooltip": {"field": "Price", "type": "nominal"}
+          }
+        }
+      ]
     },
     {
-      "mark": "point",
-      "transform": [
-        {"filter": "datum.Suburb == Region_selection"} 
-      ],
-      "encoding": {
-        "x": {"field": "Distance", "type": "quantitative"},
-        "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
-        "color": {"value": "steelblue"}, 
-        "size": {"value": 50},
-        "tooltip": {"field": "Price", "type": "nominal"}
-      }
+      "height": 350,
+      "width": 280,
+      "layer": [
+        {
+          "mark": "point",
+          "encoding": {
+            "x": {"field": "BuildingArea", "type": "quantitative"},
+            "y": {"field": "Price", "type": "quantitative", "aggregate": "median"},
+            "color": {"value": 50}, 
+            "size": {"value": 50},
+            "tooltip": {"field": "Price", "type": "nominal"}
+          }
+        },
+        {
+          "mark": "point",
+          "transform": [
+            {"filter": "datum.Suburb == Region_selection || Region_selection == null"} 
+          ],
+          "encoding": {
+            "x": {"field": "BuildingArea", "type": "quantitative", 
+                  "axis": {"titleFontSize": 16, "title": "Building Area (m²)"}},
+            "y": {"field": "Price", 
+                  "type": "quantitative", 
+                  "aggregate": "median", 
+                  "axis": {"titleFontSize": 16, "title": "Median Price ($)"}},
+            "color": {"value": "steelblue"}, 
+            "size": {"value": 50},
+            "tooltip": {"field": "Price", "type": "nominal"}
+          }
+        }
+      ]
     }
-  ]
-
+    ]
+  
+    
+  
   
 }
