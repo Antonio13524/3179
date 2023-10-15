@@ -59,7 +59,9 @@
                 "field": "Price",
                 "type": "quantitative",
                 "scale": {"type": "linear"},
+                "title": "Price ($)",
                 "axis": {
+                    "labelFontSize": 14,
                     "titleFontSize": 16
                 }
                 },
@@ -70,7 +72,11 @@
                 {"field": "Rooms", "type": "ordinal"}
                 ],
             "color": {"field": "Type",
-                     "scale": {"scheme": "tableau10"}}
+                     "scale": {"scheme": "tableau10"},
+                    "legend": {
+                        "labelFontSize": 14,
+                        "titleFontSize": 14
+                    }}
                 }
         },
         {

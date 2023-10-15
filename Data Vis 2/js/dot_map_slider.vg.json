@@ -36,7 +36,7 @@
         "transform": [
           {"filter": "datum.Sale_Year == Year"}
         ],
-        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 0.7},
+        "mark": {"type": "circle", "tooltip": {"content": "data"}, "size": 6, "opacity": 0.9},
         "encoding": {
           "longitude": {"field": "Longtitude", "type": "quantitative"},
           "latitude": {"field": "Lattitude", "type": "quantitative"},
@@ -45,10 +45,11 @@
             "field": "Price",
             "type": "quantitative",
             "title": "Price ($)",
-            "scale": {"scheme": "blues", "bins": [0, 250000, 500000, 750000, 1000000, 1250000, 1500000, 2000000,5000000, 10000000]},
+            "scale": {"scheme": "greenblue", "bins": [0, 250000, 500000, 750000, 1000000, 1250000, 1500000, 2000000,5000000, 10000000]},
             "legend": {
               "labelFontSize": 14,
-              "values": [0, 250000, 500000, 1000000, 2000000,5000000, 10000000]
+              "values": [0, 250000, 500000, 1000000, 2000000,5000000, 10000000],
+              "titleFontSize": 14
             }
           },
           "tooltip": [

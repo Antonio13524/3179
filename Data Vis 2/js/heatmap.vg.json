@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/Antonio13524/3179/main/Data%20Vis%202/data/bed_bath.csv"},
-    "title": "Median Price vs Number of Bedrooms and Bathrooms",
+    "title": {"text": "Median Price vs Number of Bedrooms and Bathrooms",
+              "fontSize": 16},
     "mark": "rect",
     "width": "container",
     "height": 400,
@@ -14,7 +15,8 @@
             "tickCount": 12,
             "tickBand": "center",
             "title": "Bedrooms",
-            "titleFontSize": 16
+            "titleFontSize": 16,
+            "labelFontSize": 14
         }
       },
       "y": {
@@ -24,17 +26,22 @@
         "axis": {
             "tickBand": "extent",
             "title": "Bathrooms",
-            "titleFontSize": 16
+            "titleFontSize": 16,
+            "labelFontSize": 14
         }
       },
       "color": {
         "field":"Median_Price",
         "type": "quantitative",
+        "scale": {"scheme": "yellowgreenblue"}, 
         "legend": {
-            "title": "Median Price ($)"
+            "title": "Median Price ($)",
+            "titleFontSize": 14,
+            "labelFontSize": 14
         }
       },
       "tooltip": [
+        {"field": "Median_Price", "type": "quantitative", "title": "Median Price", "format": "$,"},
         {"field": "Bedroom", "type": "nominal", "title": "Bedrooms"},
         {"field": "Bathroom", "type": "nominal", "title": "Bathrooms"},
         {"field": "number", "type": "quantitative", "title": "Number of Properties"}

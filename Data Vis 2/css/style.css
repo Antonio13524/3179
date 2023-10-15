@@ -14,6 +14,40 @@ body *{
     width: 100%;
 }
 
+.centered_text_500 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Adjust as needed */
+    padding: 8%;
+  }
+
+  .centered_text_600 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Adjust as needed */
+    padding: 8%;
+  }
+
+  .centered_text_350 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* Adjust as needed */
+    padding: 8%;
+  }
+
+
+  .centered_text_400 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust as needed */
+    padding: 8%;
+  }
+
+
 
 h1{
     text-align: center;

@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-    "title": "Median Price for each Council Area",
+    "title": {"text": "Median Price for each Council Area",
+            "fontSize": 16},
     "width": "container",
     "height": 500,
 
@@ -19,7 +20,8 @@
                 } 
             ],
 
-            "mark": "line",
+            "mark": {"type": "line",
+                    "tension": 0.1},
             "transform": [
                 {"filter": "datum.Sale_Year == 2016 || datum.Sale_Year == 2018" }
             ],
@@ -40,11 +42,15 @@
                 "field": "Price",
                 "type": "quantitative",
                 "axis":{
-                    "titleFontSize": 16
+                    "titleFontSize": 16,
+                    "title": "Median Price ($)",
+                    "labelFontSize": 14
                 }
               },
+              "size": {"value": 5},
               "tooltip": [{"field": "CouncilArea", "type": "nominal"},
-                          {"field": "Price", "type": "quantitative", "aggregate": "median", "format": "$,", "title": "Median Price"}],
+                          {"field": "Price", "type": "quantitative", "aggregate": "median", "format": "$,", "title": "Median Price"},
+                          {"field": "Price", "type": "quantitative", "aggregate": "count", "title": "Number of Sales"}],
               "color": {"field": "CouncilArea", "type": "nominal",
                         "legend": {
                             "values": [
@@ -68,7 +74,9 @@
                                 "Kingston City Council",	
                                 "Hume City Council"	
                             ],
-                            "labelFontSize": 14
+                            "labelFontSize": 14,
+                            "title": "Council Area",
+                            "titleFontSize": 14
                         }
                 },
               "opacity" : { 

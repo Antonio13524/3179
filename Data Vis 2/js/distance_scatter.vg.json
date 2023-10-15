@@ -38,23 +38,30 @@
        }
   ],
 
+  "transform": [
+    {
+      "calculate": "datum.Price / 1000000",
+      "as": "PriceInMillions"
+    }
+  ],
 
   "hconcat":[
     
     {
       "height": 350,
-      "width": 270,
+      "width": 290,
       "layer": [
         {
-          "title": "Price vs Distance from CBD",
+          "title": {"text":"Price vs Distance from CBD",
+                    "fontSize": 16},
           "mark": "point",
           "encoding": {
             "x": {"field": "Distance", 
                   "type": "quantitative",  
-                  "axis": {"titleFontSize": 16, "title": "Distance (km)"}},
-            "y": {"field": "Price",
+                  "axis": {"titleFontSize": 16, "title": "Distance (km)", "labelFontSize": 14}},
+            "y": {"field": "PriceInMillions",
                   "type": "quantitative",
-                  "axis": {"titleFontSize": 16, "title": "Price ($)"}},
+                  "axis": {"titleFontSize": 16, "title": "Price (Millions of $)", "labelFontSize": 14}},
             "color": {"value": 50}, 
             "size": {"value": 50},
             "tooltip": [
@@ -72,7 +79,7 @@
           ],
           "encoding": {
             "x": {"field": "Distance", "type": "quantitative"},
-            "y": {"field": "Price", "type": "quantitative"},
+            "y": {"field": "PriceInMillions", "type": "quantitative"},
             "color": {"value":"steelblue" }, 
             "size": {"value": 50},
             "tooltip": [
@@ -86,15 +93,16 @@
       ]
     },
     {
-      "title": "Price vs Building Area",
+      "title": {"text": "Price vs Building Area", 
+                "fontSize": 16},
       "height": 350,
-      "width": 270,
+      "width": 290,
       "layer": [
         {
           "mark": "point",
           "encoding": {
             "x": {"field": "BuildingArea", "type": "quantitative"},
-            "y": {"field": "Price", "type": "quantitative"},
+            "y": {"field": "PriceInMillions", "type": "quantitative"},
             "color": {"value": 50}, 
             "size": {"value": 50},
             "tooltip": [
@@ -111,11 +119,11 @@
             {"filter": "datum.Suburb == Region_selection || Region_selection == null"} 
           ],
           "encoding": {
-            "x": {"field": "BuildingArea", "type": "quantitative", 
-                  "axis": {"titleFontSize": 16, "title": "Building Area (m²)"}},
-            "y": {"field": "Price", 
+            "x": {"field": "BuildingArea", "type": "quantitative",
+                  "axis": {"titleFontSize": 16, "title": "Building Area (m²)", "labelFontSize": 14}},
+            "y": {"field": "PriceInMillions", 
                   "type": "quantitative", 
-                  "axis": {"titleFontSize": 16, "title": "Price ($)"}},
+                  "axis": {"titleFontSize": 16, "title": "Price (Millions of $)", "labelFontSize": 14}},
             "color": {"value": "steelblue"}, 
             "size": {"value": 50},
             "tooltip": [
